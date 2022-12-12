@@ -11,6 +11,7 @@ function Carousel() {
     { name: "slide3", img: "/images/slide3.png", path: "Review" },
     { name: "slide4", img: "/images/slide4.png", path: "/" },
     { name: "slide5", img: "/images/slide5.png", path: "Notice/Report" },
+    { name: "slide6", img: "/images/slide6.png", path: "Category/Ricefull" },
   ];
 
   const settings = {
@@ -39,6 +40,7 @@ function Carousel() {
                   height="47rem"
                   layout="responsive"
                   css={slideImg}
+                  priority
                 />
                 <div css={slideNumber}>
                   <span aria-labelledby="slide-num">
@@ -59,7 +61,7 @@ export default Carousel;
 
 const slider = css`
   .slick-list {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
   }
   .slick-slide div {
@@ -69,7 +71,7 @@ const slider = css`
 
 const wrapper = css`
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 20px 0;
   top: 0;

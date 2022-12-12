@@ -6,6 +6,7 @@ import PlaceCard from "components/Card/PlaceCard";
 import useScrollRestoration from "hooks/useScrollRestoration";
 import Loading from "pages/Loading";
 import useGetRestaurantByCategory from "hooks/api/useGetRestaurantByCategory";
+import CategoryStandard from "components/Text/CategoryStandard";
 
 function Alone() {
   useScrollRestoration();
@@ -27,6 +28,7 @@ function Alone() {
           width="100%"
           height="48rem"
           layout="responsive"
+          priority
         />
       </div>
       <div css={keywordMenu}>
@@ -44,7 +46,7 @@ function Alone() {
           ))}
         </div>
       </div>
-      <SectionKeyword name="전체" />
+      <SectionKeyword name="전체" /> <CategoryStandard category="혼밥" />
       <div css={inWrapper}>
         {restaurantCategory.map((restaurant) => (
           <PlaceCard
@@ -66,7 +68,6 @@ const fullSizeWrapper = (theme: Theme) => css`
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding-bottom: 3.85rem;
   background-color: ${theme.color.fullWhite};
 `;
 
@@ -84,12 +85,12 @@ const inWrapper = css`
   width: 100%;
   height: auto;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
 `;
 
 const keywordMenu = (theme: Theme) => css`
   width: 100%;
-  padding: 0.75rem 0.6rem;
+  padding: 0.35rem 0.6rem 0.75rem 0.6rem;
   background-color: ${theme.color.fullWhite};
 `;
 

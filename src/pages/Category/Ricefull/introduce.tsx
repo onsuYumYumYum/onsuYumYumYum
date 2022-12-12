@@ -21,7 +21,7 @@ function Introduce() {
         주메뉴는 백반으로 운영되고 있으며 금액은 5,300원이고, 현금/카드 결제 모두 가능합니다."
           />
 
-          <OneLineContent summary="주간 메뉴는 매주 일요일 온수냠냠냠에서 확인할 수 있습니다 🙂" />
+          <OneLineContent summary="주간 메뉴는 매주 월요일 온수냠냠냠에서 확인할 수 있습니다 🙂" />
         </div>
       </div>
       <div css={itemSizeWrapper}>
@@ -98,7 +98,6 @@ const mainSizeWrapper = css`
   position: relative;
   min-height: 100%;
   width: 100%;
-  padding-bottom: 3.85rem;
 `;
 
 const introSizeWrapper = css`
@@ -143,7 +142,7 @@ const cardWrapper = css`
 const cardInWrapper = css`
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   cursor: grab;
 `;
 

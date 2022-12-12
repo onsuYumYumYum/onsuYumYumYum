@@ -8,7 +8,7 @@ function Search({ searchField }) {
     <div css={wrapper}>
       <div css={textWrapper}>
         <span css={text}>{searchField} 검색 결과</span>
-        <Image src="/favicon/logo.png" alt="img" width="20%" height="20%" />
+        <Image src="/favicon/logo.png" alt="logo img" width="20%" height="20%" />
       </div>
       <div css={cardWrapper}>
         {storeData.모두
@@ -24,6 +24,7 @@ function Search({ searchField }) {
           .map((item, index) => (
             <PlaceCard
               key={index}
+              id={item.id}
               title={item.name}
               summary={item.summary}
               img={item.menuImg}
@@ -40,7 +41,6 @@ const wrapper = css`
   min-height: 100%;
   position: relative;
   width: 100%;
-  padding-bottom: 3.85rem;
 `;
 
 const textWrapper = css`
@@ -56,7 +56,7 @@ const cardWrapper = css`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   flex-wrap: wrap;
 `;
 

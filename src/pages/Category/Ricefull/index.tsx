@@ -26,6 +26,7 @@ function Ricefull() {
           width="100%"
           height="48rem"
           layout="responsive"
+          priority
         />
       </div>
       <div css={contentWrapper}>
@@ -38,7 +39,7 @@ function Ricefull() {
         <div css={cardWrapper}>
           <div css={contentWrapper}>
             <span css={noticeSummary}>
-              *주간 메뉴는 매주 일요일 업데이트됩니다.
+              *주간 메뉴는 매주 월요일 업데이트됩니다.
             </span>
           </div>
           {babfullMenus?.content.map((menu) => {
@@ -63,8 +64,8 @@ export default Ricefull;
 const fullSizeWrapper = (theme: Theme) => css`
   position: relative;
   width: 100%;
-  min-height: 100%;
-  padding-bottom: 3.85rem;
+  /* min-height: 100%; */
+  min-height: auto;
   background-color: ${theme.color.fullWhite};
 `;
 
